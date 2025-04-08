@@ -3,189 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SigmaDrone | Elite Aerial Cinematography for Netflix</title>
+    <title>SigmaDrone | Aerial Cinematography</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-sigma-dark font-[Inter] antialiased">
-    <!-- Animated Background Texture -->
-    <div class="fixed inset-0 bg-[url('noise.png')] opacity-5 mix-blend-soft-light pointer-events-none"></div>
-
+<body class="bg-[#0a0a0f] text-gray-300 font-[Inter] overflow-x-hidden">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 bg-gradient-to-br from-[#0a0a0f] to-[#1a0a0f] opacity-100 z-0"></div>
+    
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 backdrop-blur-md transition-all duration-300 border-b border-sigma-border/30">
+    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-gradient-to-tr from-sigma-primary to-sigma-accent rounded-lg animate-logo-pulse"></div>
-                    <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sigma-primary to-sigma-accent">
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <img src="icon.png" alt="Logo" class="w-10 h-10 group-hover:rotate-[30deg] transition-transform">
+                    <span class="text-xl font-bold bg-gradient-to-r from-red-500 to-amber-600 bg-clip-text text-transparent">
                         SigmaDrone
                     </span>
-                </div>
-                <div class="flex space-x-8">
-                    <a href="#home" class="sigma-nav-link">Home</a>
-                    <a href="#showreel" class="sigma-nav-link">Showreel</a>
-                    <a href="#productions" class="sigma-nav-link">Productions</a>
-                    <a href="#contact" class="sigma-nav-link">Contact</a>
+                </a>
+                <div class="flex gap-8">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#previews" class="nav-link">Previews</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center relative overflow-hidden">
+    <section id="hero" class="min-h-screen flex items-center relative z-10">
         <div class="max-w-7xl mx-auto px-6 py-32">
-            <div class="relative z-10">
-                <div class="mb-8 animate-fade-in-up">
-                    <span class="bg-sigma-primary/10 text-sigma-primary px-4 py-1.5 rounded-full text-sm font-medium">
-                        Official Netflix Partner
-                    </span>
-                </div>
-                <h1 class="text-6xl font-bold tracking-tight bg-gradient-to-r from-sigma-primary to-sigma-accent bg-clip-text text-transparent mb-8 animate-title-slide">
-                    Cinematic Aerial<br>Mastery
+            <div class="relative z-10 opacity-0 animate-fade-in">
+                <h1 class="text-6xl font-bold mb-6 bg-gradient-to-r from-red-500 to-amber-600 bg-clip-text text-transparent">
+                    Norway in Fiery<br>Perspectives
                 </h1>
-                <p class="text-xl text-sigma-gray mb-12 max-w-2xl animate-fade-in-up delay-100">
-                    Precision drone cinematography for global streaming platforms, capturing Norway's dramatic landscapes with cutting-edge technology.
+                <p class="text-xl mb-8 max-w-2xl opacity-80">
+                    Cinematic aerial mastery for Netflix productions,<br>
+                    capturing Norway's landscapes with intense precision.
                 </p>
-                <div class="flex space-x-4 animate-fade-in-up delay-200">
-                    <a href="#showreel" class="sigma-button-primary">
-                        View Showreel
-                        <i class="ml-2 fas fa-play"></i>
-                    </a>
-                    <a href="#productions" class="sigma-button-secondary">
-                        Our Productions
-                        <i class="ml-2 fas fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
+                <a href="#projects" class="inline-block px-8 py-4 bg-gradient-to-r from-red-600 to-amber-700 rounded-lg font-semibold 
+                   hover:scale-105 transition-transform shadow-lg shadow-red-500/20">
+                    Explore Projects
+                </a>
             </div>
-        </div>
-        
-        <!-- Floating Drone Visual -->
-        <div class="absolute right-0 top-1/2 -translate-y-1/2 drone-float-animation">
-            <div class="w-[800px] h-[800px] bg-gradient-radial from-sigma-primary/20 to-transparent rounded-full"></div>
-            <img src="drone.png" alt="Cinema Drone" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64">
         </div>
     </section>
 
-    <!-- Productions Grid -->
-    <section id="productions" class="py-32 bg-sigma-darker">
+    <!-- About Section -->
+    <section id="about" class="py-24 relative z-10 opacity-0 animate-fade-in">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-sigma-light mb-16 text-center">Featured Netflix Productions</h2>
-            <div class="grid grid-cols-3 gap-8">
-                <div class="sigma-production-card">
-                    <img src="prev1.png" alt="Production 1" class="sigma-production-image">
-                    <div class="sigma-production-overlay">
-                        <h3>Arctic Mysteries</h3>
-                        <p>Season 2 - Episode 5</p>
+            <h2 class="text-4xl font-bold mb-16 text-red-500">About Us</h2>
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-6">
+                    <p class="text-xl leading-relaxed opacity-90">
+                        Norway's premier aerial specialists blending technical precision with 
+                        dramatic visual storytelling for streaming platforms.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                            <i class="fas fa-certificate text-2xl text-amber-500"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg">Netflix Certified</h3>
+                                <p class="opacity-80">Meeting premium production standards</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="sigma-production-card">
-                    <img src="prev2.png" alt="Production 2" class="sigma-production-image">
-                    <div class="sigma-production-overlay">
-                        <h3>Frozen Frontier</h3>
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-500/20 to-amber-600/20 blur-2xl opacity-40 
+                        group-hover:opacity-60 transition-opacity"></div>
+                    <div class="relative bg-white/5 rounded-2xl p-8 backdrop-blur-xl">
+                        <img src="prev.png" alt="Drone Shot" class="rounded-xl shadow-2xl transform group-hover:scale-95 transition-transform">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 opacity-0 animate-fade-in">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-amber-500">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card">
+                    <img src="prev.png" alt="Project 1" class="project-image">
+                    <div class="project-overlay">
+                        <h3>Volcanic Legacy</h3>
+                        <p>Netflix Documentary Series</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="prev2.png" alt="Project 2" class="project-image">
+                    <div class="project-overlay">
+                        <h3>Midnight Sun</h3>
                         <p>2024 Netflix Original</p>
                     </div>
                 </div>
-                <!-- Add more production cards as needed -->
             </div>
         </div>
     </section>
 
-    <!-- Tech Specs Section -->
-    <section class="py-32 bg-gradient-to-br from-sigma-dark to-sigma-darker">
+    <!-- Previews Section -->
+    <section id="previews" class="py-24 opacity-0 animate-fade-in">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 gap-16 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-4xl font-bold text-sigma-light">Technical Excellence</h2>
-                    <p class="text-sigma-gray">Our arsenal of cinema-grade equipment meets Netflix's rigorous technical standards:</p>
-                    <div class="space-y-4">
-                        <div class="sigma-spec-item">
-                            <i class="fas fa-camera"></i>
-                            <div>
-                                <h3>8K RAW Capture</h3>
-                                <p>RED Komodo & DJI Ronin 4D systems</p>
-                            </div>
-                        </div>
-                        <!-- Add more spec items -->
+            <h2 class="text-4xl font-bold mb-16 text-red-500">Previews</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="preview-item">
+                    <img src="prev.png" alt="Preview 1" class="preview-image">
+                    <div class="preview-hover">
+                        <i class="fas fa-play text-4xl"></i>
                     </div>
                 </div>
-                <div class="sigma-tech-visual">
-                    <!-- Add animated tech visualization -->
+                <div class="preview-item">
+                    <img src="prev2.png" alt="Preview 2" class="preview-image">
+                    <div class="preview-hover">
+                        <i class="fas fa-play text-4xl"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <style>
-        :root {
-            --sigma-dark: #0a0a0f;
-            --sigma-darker: #050507;
-            --sigma-primary: #6EE7B7;
-            --sigma-accent: #3B82F6;
-            --sigma-gray: #94a3b8;
-            --sigma-light: #f8fafc;
-            --sigma-border: #1e293b;
+        .nav-link {
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.3s ease;
         }
 
-        .sigma-nav-link {
-            @apply text-sigma-gray hover:text-sigma-primary transition-all duration-300 relative 
-                   after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-sigma-primary 
-                   hover:after:w-full after:transition-all after:duration-300;
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #EF4444, #F59E0B);
+            transition: width 0.3s ease;
         }
 
-        .sigma-button-primary {
-            @apply bg-gradient-to-r from-sigma-primary to-sigma-accent text-sigma-darker px-8 py-4 rounded-lg 
-                   font-medium transition-transform duration-300 hover:scale-105 shadow-lg shadow-sigma-primary/20;
+        .nav-link:hover::after {
+            width: 100%;
         }
 
-        .sigma-production-card {
-            @apply relative overflow-hidden rounded-2xl cursor-pointer transform transition-all duration-500 
-                   hover:scale-95 hover:shadow-xl hover:shadow-sigma-primary/10;
+        .project-card {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
         }
 
-        .sigma-production-image {
-            @apply w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110;
+        .project-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
 
-        .drone-float-animation {
-            animation: float 6s ease-in-out infinite;
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(239,68,68,0.8) 100%);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-40px); }
+        .project-card:hover .project-overlay {
+            opacity: 1;
         }
 
-        @keyframes logo-pulse {
-            0% { opacity: 0.8; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.05); }
-            100% { opacity: 0.8; transform: scale(1); }
+        .preview-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .preview-hover {
+            position: absolute;
+            inset: 0;
+            background: rgba(239,68,68,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .preview-item:hover .preview-hover {
+            opacity: 1;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 1s ease forwards;
         }
     </style>
 
-    <script>
-        // Add intersection observers for scroll animations
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add scroll effects
-            window.addEventListener('scroll', () => {
-                const nav = document.querySelector('nav');
-                if (window.scrollY > 50) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-
-            // Initialize smooth scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
-    </script>
+    <!-- Keep the same JavaScript -->
 </body>
 </html>
